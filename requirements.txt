@@ -1,0 +1,8 @@
+flask
+flask-login
+langchain
+langchain-groq
+chromadb
+python-dotenv
+PyPDF2
+bcrypt

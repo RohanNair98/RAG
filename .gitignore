@@ -1,0 +1,43 @@
+# Virtual environment
+myvenv/
+myenv/
+env/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Django specific
+*.log
+*.pot
+*.pyc
+*.mo
+*.pyo
+*.pyd
+
+# Local settings
+*.env
+
+# Static files
+staticfiles/
+
+# Media files
+media/
+db
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+
+ipynb/file_fetching.ipynb
+
+*db.sqlite3
+
+data/
+logs/
+ssl/
+
+celerybeat-schedule.bak
+celerybeat-schedule.dat
+celerybeat-schedule.dir

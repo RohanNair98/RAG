@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with {{ document_name }}</title>
+    <script>
+        async function sendQuestion() {
+            const questionInput = document.getElementById("question");
+            const question = questionInput.value;
+            const documentName = "{{ document_name }}";
+            const responseBox = document.getElementById("response");
+
+            const response = await fetch("{{ url_for('process_chat') }}", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ document_name: documentName, question: question })
+            });
+            const result = await response.json();
+            responseBox.innerHTML = `<strong>Answer:</strong> ${result.answer}<br><strong>Sources:</strong> ${result.sources.join(", ")}`;
+            questionInput.value = "";
+        }
+    </script>
+</head>
+<body>
+    <h2>Chat with {{ document_name }}</h2>
+    <div>
+        <input type="text" id="question" placeholder="Ask a question...">
+        <button onclick="sendQuestion()">Send</button>
+    </div>
+    <div id="response"></div>
+    <p><a href="{{ url_for('dashboard') }}">Back to Dashboard</a></p>
+</body>
+</html>
