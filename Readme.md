@@ -1,3 +1,5 @@
+An app which lets you upload documents and chat with them after logging in.
+The documents are stored in vector DB
 The backend.py file contain the rest API of the app.
 To Register a new user use :-  'http://your-url/api/register'
 To Login use :- 'http://your-url/api/login'
