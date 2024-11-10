@@ -7,3 +7,7 @@ python-dotenv
 PyPDF2
 bcrypt
 gunicorn
+Flask-Cors
+jwt
+-U langchain-community
+sentence-transformers
