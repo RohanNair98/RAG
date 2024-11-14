@@ -1,3 +1,4 @@
+# RAG App for Document Chat
 An app which lets you upload documents and chat with them after logging in. 
 The documents are stored in a vector DB(chroma DB). The backend.py file contain the rest API of the app. 
 To Register a new user use :- 'http://your-url/api/register' 
